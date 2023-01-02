@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('GMT');
-//require_once 'gzip_pres.php';
+require_once 'gzip_pres.php';
 ob_start();
 session_start();
 require_once 'Class/Db.Class.php';
@@ -11,12 +11,10 @@ if($uris[count($uris)-1] !='sitemap'){
     require_once 'Class/Site.Class.php';
     $Site = new Site();
 }
-/////////////////////////////////////////////////////////
 $server = "localhost";
-$veritabani = "cevikbilisim_xpeedzero";
-$kullanici = "cevikbilisim_yakup";
-$sifre = "d04A7amFjq_yakup";
-/////////////////////////////////////////////////////////
+$veritabani = "root";
+$kullanici = "root";
+$sifre = "password";
 $db = new Db($server,$veritabani,$kullanici,$sifre);
 $baglanti = @mysql_connect($server, $kullanici, $sifre);
 $veritabani = @mysql_select_db($veritabani);
