@@ -77,11 +77,10 @@ function kisalt($kelime, $str = 10){
 // Url
 function URL(){
     $dizin = $_SERVER["HTTP_HOST"];
-    return 'http://'.$dizin.'/';
+    return 'https://'.$dizin.'/';
 }
 
-// Tarih Fonsiyonu
-//gün,ay,yil,format ekle. parametresiz bugünü verir  //yyyy-mm-dd
+
 function tarih($gunekle=0,$ayekle=0,$yilekle=0, $format='d.m.Y')
 {
   $zaman = date($format ,mktime(0, 0, 0, date("m")+$ayekle, date("d")+$gunekle, date("Y")+$yilekle));
